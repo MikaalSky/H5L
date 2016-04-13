@@ -1,5 +1,5 @@
 //test
-var h5l  = {
+var H5L  = {
 	instanceCount:0
 
 };
