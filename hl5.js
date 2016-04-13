@@ -29,6 +29,10 @@ var hl5 = function(wrapperid){
 hl5.prototype.setEditorHeight = function(height) {
 	this.editor.style.height = height+"px";
 };
+hl5.prototype.setInitialHeight = function(height){
+	this.canvas.style.height = height+"px";
+	this.setEditorHeight(height);
+};
 
 var test = new hl5("myHL5");
-test.setEditorHeight(400);
+test.setInitialHeight(400);
