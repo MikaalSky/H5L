@@ -21,6 +21,10 @@ var hl5 = function(wrapperid){
 	this.editor.setShowPrintMargin(false);
 	this.editor.getSession().setUseWorker(false);
 	this.editor.setHighlightActiveLine(false);
+	var canvasContainer = document.createElement("canvas");
+	canvasContainer.className += " h5l-canvas"
+	this.main.appendChild(canvasContainer);
+	this.canvas = canvasContainer;
 };
 hl5.prototype.setEditorHeight = function(height) {
 	this.editor.style.height = height+"px";
