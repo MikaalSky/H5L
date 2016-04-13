@@ -28,11 +28,18 @@ var hl5 = function(wrapperid){
 };
 hl5.prototype.setEditorHeight = function(height) {
 	this.editor.style.height = height+"px";
+	if(height > parseFloat(this.canvas.style.height.replace("px",""))){
+		this.setWrapperHeight(height);
+	}
 };
 hl5.prototype.setInitialHeight = function(height){
 	this.canvas.style.height = height+"px";
 	this.setEditorHeight(height);
+	this.setWrapperHeight(height);
 };
-
+hl5.prototype.setWrapperHeight = function(height) {
+	this.main.style.height = height+px;
+}
+}
 var test = new hl5("myHL5");
 test.setInitialHeight(400);
