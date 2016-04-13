@@ -42,7 +42,7 @@ h5l.prototype.setInitialHeight = function(width,height){
 	this.setWrapperHeight(height);
 };
 h5l.prototype.setWrapperHeight = function(height) {
-	this.main.style.height = height+px;
+	this.main.style.height = height+"px";
 }
 var test = new h5l("myH5L");
 test.setInitialHeight(400,500);
