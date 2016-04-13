@@ -28,9 +28,9 @@ var h5l = function(wrapperid){
 };
 h5l.prototype.setEditorHeight = function(height) {
 	this.editor.style.height = height+"px";
-	if(height > Math.parseFloat(this.canvas.style.height.replace("px",""))){
+	//if(height > parseFloat(this.canvas.style.height.replace("px",""))){
 		this.setWrapperHeight(height);
-	}
+	//}
 };
 h5l.prototype.setCanvasDimensions = function(width,height){
 	this.canvas.style.height = height+"px"
