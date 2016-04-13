@@ -32,14 +32,17 @@ hl5.prototype.setEditorHeight = function(height) {
 		this.setWrapperHeight(height);
 	}
 };
-hl5.prototype.setInitialHeight = function(height){
-	this.canvas.style.height = height+"px";
+h5l.prototype.setCanvasDimensions = function(width,height){
+	this.canvas.style.height = height+"px"
+	this.canvas.style.width = width+"px"
+}
+hl5.prototype.setInitialHeight = function(width,height){
+	this.setCanvasDimensions(width,height)
 	this.setEditorHeight(height);
 	this.setWrapperHeight(height);
 };
-hl5.prototype.setWrapperHeight = function(height) {
+h5l.prototype.setWrapperHeight = function(height) {
 	this.main.style.height = height+px;
 }
-}
 var test = new hl5("myHL5");
-test.setInitialHeight(400);
+test.setInitialHeight(400,500);
