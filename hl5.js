@@ -1,12 +1,12 @@
 //test
-var HL5  = {
+var h5l  = {
 	instanceCount:0
 
 };
 
-var hl5 = function(wrapperid){
-	this.instance = HL5.instanceCount;
-	HL5.instanceCount++;
+var h5l = function(wrapperid){
+	this.instance = H5L.instanceCount;
+	H5L.instanceCount++;
 	this.main = document.getElementById("myHL5");
 	this.main.className+=" h5l-wrapper"
 	var editorContainer = document.createElement("div");
@@ -26,7 +26,7 @@ var hl5 = function(wrapperid){
 	this.main.appendChild(canvasContainer);
 	this.canvas = canvasContainer;
 };
-hl5.prototype.setEditorHeight = function(height) {
+h5l.prototype.setEditorHeight = function(height) {
 	this.editor.style.height = height+"px";
 	if(height > parseFloat(this.canvas.style.height.replace("px",""))){
 		this.setWrapperHeight(height);
@@ -36,7 +36,7 @@ h5l.prototype.setCanvasDimensions = function(width,height){
 	this.canvas.style.height = height+"px"
 	this.canvas.style.width = width+"px"
 }
-hl5.prototype.setInitialHeight = function(width,height){
+h5l.prototype.setInitialHeight = function(width,height){
 	this.setCanvasDimensions(width,height)
 	this.setEditorHeight(height);
 	this.setWrapperHeight(height);
