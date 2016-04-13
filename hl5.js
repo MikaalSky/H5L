@@ -21,5 +21,9 @@ var hl5 = function(wrapperid){
 	this.editor.getSession().setUseWorker(false);
 	this.editor.setHighlightActiveLine(false);
 };
+hl5.prototype.setEditorHeight = function(height) {
+	this.editor.style.height = height+"px";
+};
 
-var test = new hl5("myHL5")
+var test = new hl5("myHL5");
+test.setEditorHeight(400);
