@@ -10,7 +10,7 @@ var h5l = function(wrapperid){
 	this.main = document.getElementById("myHL5");
 	this.main.className+=" h5l-wrapper"
 	var editorContainer = document.createElement("div");
-	editorContainer.id = "hl5-editor-" + this.instance;
+	editorContainer.id = "h5l-editor-" + this.instance;
 	editorContainer.innerHTML = "dd"
 	editorContainer.className += " h5l-editor"
 	this.main.appendChild(editorContainer);
