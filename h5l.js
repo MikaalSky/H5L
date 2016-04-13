@@ -39,7 +39,6 @@ h5l.prototype.setCanvasDimensions = function(width,height){
 h5l.prototype.setInitialHeight = function(width,height){
 	this.setCanvasDimensions(width,height)
 	this.setEditorHeight(height);
-	this.setWrapperHeight(height);
 };
 h5l.prototype.setWrapperHeight = function(height) {
 	this.main.style.height = height+"px";
