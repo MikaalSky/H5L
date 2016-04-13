@@ -13,13 +13,19 @@ var h5l = function(wrapperid){
 	editorContainer.innerHTML = "dd"
 	editorContainer.className += " h5l-editor"
 	this.main.appendChild(editorContainer);
-	var editor = ace.edit("h5l-editor-" + this.instance);
-	editor.getSession().setMode("ace/mode/javascript");
-	editor.getSession().setUseSoftTabs(true);
-	editor.getSession().setUseWrapMode(true);
-	editor.setShowPrintMargin(false);
-	editor.getSession().setUseWorker(false);
-	editor.setHighlightActiveLine(false);
+	this.aceEditor = ace.edit("h5l-editor-" + this.instance);
+	this.aceEditor.getSession().setMode("ace/mode/javascript");
+	this.aceEditor.getSession().setUseSoftTabs(true);
+	this.aceEditor.getSession().setUseWrapMode(true);
+	this.aceEditor.setShowPrintMargin(false);
+	this.aceEditor.getSession().setUseWorker(false);
+	this.aceEditor.setHighlightActiveLine(false);
+	this.aceEditor.getSession().setAnnotations([{
+	  row: 0,
+	  column: 0,
+	  text: "Strange error",
+	  type: "error" // also warning and information
+	}]);
 	this.editor = this.main.getElementsByClassName("h5l-editor")[0];
 	var canvasContainer = document.createElement("canvas");
 	canvasContainer.className += " h5l-canvas"
