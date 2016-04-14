@@ -15,8 +15,9 @@ var h5l = function(wrapperid){
 	this.main.appendChild(editorContainer);
 	this.aceEditor = ace.edit("h5l-editor-" + this.instance);
 	this.aceEditor.getSession().setMode("ace/mode/javascript");
+		this.aceEditor.getSession().setUseWrapMode(true);
 	this.aceEditor.getSession().setUseSoftTabs(true);
-	this.aceEditor.getSession().setUseWrapMode(true);
+
 	this.aceEditor.setShowPrintMargin(false);
 	this.aceEditor.getSession().setUseWorker(false);
 	this.aceEditor.setHighlightActiveLine(false);
@@ -33,10 +34,11 @@ var h5l = function(wrapperid){
 	this.canvas = this.main.getElementsByClassName("h5l-canvas")[0];
 };
 h5l.prototype.setEditorHeight = function(height) {
-	this.editor.style.maxHeight = height+"px";
+	this.editor.style.height = height+"px";
 	//if(height > parseFloat(this.canvas.style.height.replace("px",""))){
 		this.setWrapperHeight(height);
 	//}
+	this.aceEditor.resize();
 };
 h5l.prototype.setCanvasDimensions = function(width,height){
 	this.canvas.style.maxHeight = height+"px"
